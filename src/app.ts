@@ -1,5 +1,6 @@
 import cors from 'cors'
 import express from 'express'
+import handleConnectDatabase from '@/config/database.ts'
 import serverConfig from '@/config/serverConfig.ts'
 
 const app = express()
@@ -17,6 +18,9 @@ app.get('/hello', (_req, res) => {
     })
 })
 
-app.listen(serverConfig.PORT || 3333)
+await handleConnectDatabase()
+app.listen(serverConfig.PORT || 3333, () => {
+    console.log(`Servidor rodando na porta: ${serverConfig.PORT} 🚀`)
+})
 
 export default app
