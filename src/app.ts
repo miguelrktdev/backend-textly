@@ -2,6 +2,7 @@ import cors from 'cors'
 import express from 'express'
 import handleConnectDatabase from '@/config/database.ts'
 import serverConfig from '@/config/serverConfig.ts'
+import routes from '@/routes/index.ts'
 
 const app = express()
 
@@ -12,11 +13,7 @@ app.use(
 )
 app.use(express.json({ limit: '10kb' }))
 
-app.get('/hello', (_req, res) => {
-    res.json({
-        message: 'Hello world',
-    })
-})
+app.use('/api', routes)
 
 await handleConnectDatabase()
 app.listen(serverConfig.PORT || 3333, () => {
