@@ -1,0 +1,14 @@
+{
+	"name": "backend-textly",
+	"version": "1.0.0",
+	"description": "Backend for Textly, a text processing application",
+	"main": "app.ts",
+	"scripts": {
+		"commit": "gitmoji -c"
+	},
+	"keywords": [],
+	"author": "miguelrktdev",
+	"license": "ISC",
+	"packageManager": "pnpm@10.11.1",
+	"type": "module"
+}
