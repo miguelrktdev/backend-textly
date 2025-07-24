@@ -1,14 +1,31 @@
 {
-	"name": "backend-textly",
-	"version": "1.0.0",
-	"description": "Backend for Textly, a text processing application",
-	"main": "app.ts",
-	"scripts": {
-		"commit": "gitmoji -c"
-	},
-	"keywords": [],
-	"author": "miguelrktdev",
-	"license": "ISC",
-	"packageManager": "pnpm@10.11.1",
-	"type": "module"
+  "name": "backend-textly",
+  "version": "1.0.0",
+  "description": "Backend for Textly, a text processing application",
+  "main": "app.ts",
+  "scripts": {
+    "commit": "gitmoji -c",
+    "dev": "tsx ./src/app.ts --watch",
+    "lint": "biome check",
+    "format": "biome format"
+  },
+  "keywords": [],
+  "author": "miguelrktdev",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.1",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "ultracite": "5.0.48"
+  }
 }
